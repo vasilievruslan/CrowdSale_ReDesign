@@ -1,0 +1,56 @@
+.banner{
+	background: $main-gradient url(../img/logo-opl-big.svg);
+	min-height: 100vh;
+	position: relative;
+
+}
+.banner__header{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	color: #fff;
+	max-width: 95vw;
+	margin: 0 auto;
+}
+.logo__header{
+	margin: 0px 82px 0px 0px;
+}
+.alert__header{
+	word-wrap: break-word;
+}
+.banner__main-content{
+	max-width: 1200px;
+	margin: 0 auto;
+	color: #fff;
+}
+.banner__btn{
+	position: absolute;
+	left: 20vw;
+	&.--top{
+		top: 30vh;
+	}
+	&.--bottom{
+		top: 50vh;
+	}
+}
+.banner__line{
+	position: absolute;
+	top: calc(50vh + 19px);
+}
+.banner__descr{
+	max-width: 250px;
+    text-align: justify;
+    position: absolute;
+    top: calc(50vh + 19px);
+    left: 40vw;
+
+}
+.banner__logo{
+	position: absolute;
+	right: 20vw;
+	top: 30vh;
+	text-align: center;
+}
+.logo-min{
+	margin-top: 10vh;
+}

@@ -1,0 +1,115 @@
+.token-warp{
+	background: $main-gradient;
+}
+.grafic{
+	position: relative;
+	overflow: hidden;
+}
+.grafic__title{
+	text-align: center;
+	color: #fff;
+	font-size: 34px;
+	font-weight: 500;
+	margin-top: 80px;
+}
+	
+@keyframes shadow-ripple {
+	0% {
+		text-shadow: 0px 0px 0px #fff;
+	}
+	50% {
+		text-shadow: 0px 0px 40px #fff;
+	}
+	100%{
+		text-shadow: 0px 0px 0px #fff;
+	}
+}
+.grafic-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin: 70px 0px;
+	color: #fff;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.grafic_steps{
+	list-style-type: none;
+	margin: 0;
+	margin-top: 30px;
+	.grafic_steps_item{
+		font-weight: 500;
+		font-size: 18px;
+		display: flex;
+		align-items: center;
+		margin: 10px;
+		.grafic-item-ico{
+			margin-right: 20px;
+			width: 30px;
+			height: 35px;
+			display: block;
+		}
+	}
+}
+.active{
+	animation: shadow-ripple 1.5s linear infinite;
+}
+
+@media screen and (max-width: 670px) {
+	.grafic-pictire{
+		display: none;
+	}
+	.grafic-responsive{
+		display: block;
+	}
+}
+.bonuces-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	h2{
+		text-align: center;
+		width: 100%;
+
+	}
+	.bonuces-description{
+		width: 400px;
+		max-width: 95%;
+		padding: 20px;
+
+	}
+
+
+}
+.bonuces-form{
+	width: 400px;
+	max-width: 95vw;
+	padding: 20px;
+	.bonuses-input{
+		width: 100%;
+		padding: 8px 12px;
+		border: none;
+		box-sizing: border-box;
+		&::placeholder{
+			color: #dddddd;
+			font-weight: 600;
+		}
+	}
+}
+.grafic-bonuces-picture{
+	width: 800px;
+	max-width: 95%;
+}
+.bonuces-container{
+	padding: 40px 0px;
+}
+.bonuses-button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background: #fff;
+}
