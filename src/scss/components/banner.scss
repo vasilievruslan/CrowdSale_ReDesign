@@ -2,6 +2,7 @@
 	background: $main-gradient url(../img/logo-opl-big.svg);
 	min-height: 100vh;
 	position: relative;
+	overflow-x: hidden;
 
 }
 .banner__header{
@@ -21,36 +22,128 @@
 .banner__main-content{
 	max-width: 1200px;
 	margin: 0 auto;
+	min-height: 80vh;
 	color: #fff;
+	position: relative;
 }
-.banner__btn{
-	position: absolute;
-	left: 20vw;
-	&.--top{
-		top: 30vh;
+.btn_container{
+	float: left;
+	margin-top: 12vh;
+	.banner__btn{
+		display: block;
+		margin-bottom: 120px;
 	}
-	&.--bottom{
-		top: 50vh;
-	}
-}
-.banner__line{
-	position: absolute;
-	top: calc(50vh + 19px);
 }
 .banner__descr{
 	max-width: 250px;
-    text-align: justify;
     position: absolute;
-    top: calc(50vh + 19px);
-    left: 40vw;
+    text-align: justify;
+    left: 260px;
+    top: calc(12vh + 193px);
+    &:before{
+		content: "";
+    	position: absolute;
+    	left: -10px;
+    	top: 0px;
+    	height: 210px;
+    	background-color: #fff;
+    	width: 2px;
+    }
+    &:after{
+    	content: "";
+    	position: absolute;
+    	left: -50px;
+    	top: 0px;
+    	height: 2px;
+    	background-color: #fff;
+    	width: 40px;
+    }
 
 }
 .banner__logo{
-	position: absolute;
-	right: 20vw;
-	top: 30vh;
+	float: right;
 	text-align: center;
+	position: relative;
+	margin-top: 12vh;
+	.logo-main{
+		width: 220px;
+	}
+	.logo-min{
+		position: relative;
+		margin-top: 80px;
+	    &:before{
+	    	content: "";
+	    	position: absolute;
+	    	right: 128px;
+	    	top: 19px;
+	    	height: 2px;
+	    	background-color: #fff;
+	    	width: 822px;
+	    }
+	}
 }
-.logo-min{
-	margin-top: 10vh;
+
+.currency-form{
+	position: fixed;
+	height: 100vh;
+	width: 440px;
+	max-width: 100vw;
+	right: -440px;
+	top: 0;
+	padding: 40px;
+	background-color: #fff;
+	box-sizing: border-box;
+	overflow-y: scroll;
+	transition: right 0.4s;
+	z-index: 99999;
+	&.active{
+		right: 0;
+	}
+}
+.currency-form__item,
+.currency-form__input{
+	position: relative;
+	padding-left: 40px;
+	box-sizing: border-box;
+	p{
+		
+		color: #000;
+		margin-top: 5px;
+		font-size: 14px;
+
+	}
+	// display: flex;
+	.checkbox-ico{
+		position: absolute;
+		top: -3px;
+		left: 0;
+		width: 25px;
+		height: 30px;
+		display: block;
+		background:  url(../img/chekbox.svg) center center no-repeat;
+	}
+}
+.currency-form__btn{
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 400;
+	text-transform: uppercase;
+	min-width: 120px;
+	min-height: 44px;
+	border-radius: 10px;
+	background-color: #2e8fdf;
+	border: none;
+}
+.currency-form__input{
+	input{
+		border: 2px solid #333333;
+		padding: 8px 12px;
+		width: 100%;
+		box-sizing: border-box;
+		display: block;
+		&:placeholder{
+			color: #dedede;
+		}
+	}
+
 }

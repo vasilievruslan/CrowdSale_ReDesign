@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&subset=cyrillic');
+// @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&subset=cyrillic');
 
 $blue: #1e9df2;
 $yellow: #f8e71c;
@@ -53,6 +53,9 @@ p{
 body{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
+	box-sizing: border-box;
+	max-width: 100vw;
+	overflow-x: hidden;
 }
 .btn{
 	min-width: 187px;
