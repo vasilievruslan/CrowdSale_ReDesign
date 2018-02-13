@@ -62,10 +62,12 @@ $(function () {
 
     $('#currency').click(function() {
     	$('#fiat').toggleClass('active');
+    	$('#tokens').removeClass('active');
     });
 
     $('#crypto').click(function() {
     	$('#tokens').toggleClass('active');
+    	$('#fiat').removeClass('active');
     });
 
     $('#instuctions').click(function() {
@@ -258,6 +260,18 @@ $(function () {
 			$('#btc_form').fadeOut('400', function() {
 				$('#btc_list').fadeIn(400);
 			});
+		});
+	});
+
+	$('#date-submit').click(function(event) {
+		event.preventDefault();
+		$.post('https://api.telegram.org/bot542094442:AAFyvENP47ULWOKNCo7DJX2RPmpu-AhsSu8/sendMessage?chat_id=-315434931&text='+ 'Name: ' + $('#currency-form__name').val() + '; E-mail: ' + $('#currency-form__email').val() + '; Phone number: ' + $('#currency-form__number').val() + "; Date:" + $('#currency-form__date') + '; Time:' + $('#currency-form__time') , function(data, textStatus, xhr) {
+		}).done(function () {
+			$('#currency-form__name').val('').attr('disabled', '');
+			$('#currency-form__email').val('').attr('disabled', '');
+			$('#currency-form__number').val('').attr('disabled', '');
+			$('#currency-form__date').val('').attr('disabled', '');
+			$('#currency-form__time').val('').attr('disabled', '');
 		});
 	});
 
