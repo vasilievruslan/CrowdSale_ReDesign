@@ -122,3 +122,14 @@
 		}
 	}
 }
+@media screen and (max-width: 640px) {
+	.faq-btn{
+		order: -1;
+	}
+	.videobtn{
+		order: -2;
+	}
+	.default{
+		width: 230px;
+	}
+}

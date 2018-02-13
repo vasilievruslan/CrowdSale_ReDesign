@@ -61,21 +61,22 @@ $(function () {
     });
 
     $('#currency').click(function() {
-    	$('.currency-form').toggleClass('active');
+    	$('#fiat').toggleClass('active');
+    });
+
+    $('#crypto').click(function() {
+    	$('#tokens').toggleClass('active');
     });
 
     $('#instuctions').click(function() {
     	console.log('click');
     	$('.wallets-container').slideToggle(400);
     });
-
-   	$('.currency-form').swipe({
-    	swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-        	if (direction == "right") {
-        		$('.currency-form').removeClass('active');
-        	}
-        },
-    })
+   	$('.currency-form').on('swipe', function(e, Dx, Dy){
+   		if(Dx > 0){
+			$('.currency-form').removeClass('active');
+   		}
+    });
 
 	$( "#currency-form__date" ).datepicker({
 	  altFormat: "yy-mm-dd"
@@ -260,8 +261,26 @@ $(function () {
 		});
 	});
 
+	$('#toaccount').click(function(event) {
+		localStorage.setItem('to', 'account')
+		if(localStorage.getItem('to') !== undefined){
+
+		}
+	});
+	$('#toeth').click(function(event) {
+		localStorage.setItem('to', 'eth')
+		if(localStorage.getItem('to') !== undefined){
+
+		}
+	});
+	$('#tobtc').click(function(event) {
+		localStorage.setItem('to', 'btc')
+		if(localStorage.getItem('to') !== undefined){
+
+		}
+	});
 		$('#check').click(function(e) {
-			e.preventDefault();
+			e.preventDefault();	
 			if($('#toaccountradio').is(':checked')){
 				if (localStorage.getItem('to') == "account") {
 					window.location.replace('https://account.onplace.io/')
@@ -283,19 +302,6 @@ $(function () {
 			}
 		});
 
-	$('#eth-show').click(function(event) {
-		event.preventDefault();
-		localStorage.setItem('to', 'eth')
-	});
-	$('#btc-show').click(function(event) {
-		event.preventDefault();
-		localStorage.setItem('to', 'btc')
-	});
-	$('.toaccount').click(function(event) {
-		event.preventDefault();
-		localStorage.setItem('to', 'account')
-	});
-
 	$('#closebtn-account').click(function(event) {
 		event.preventDefault();
 		$('#contribute-account').fadeOut(500);
@@ -308,6 +314,59 @@ $(function () {
 		}else{
 			$('.btn-check').attr('disabled', '');
 		}
+	});
+
+	//========================================================================================
+
+	$('#showQr').click(function(event) {
+		event.preventDefault();
+		$('.qrpop-up').fadeIn(500);
+	});
+	$('#closebtn-qr').click(function(event) {
+		event.preventDefault();
+		$('.qrpop-up').fadeOut(500);
+
+	});
+
+
+	var $popUp = $('.pop-up');
+	function ShowVideo() {
+		if ($popUp.attr('lang-id') !== 'cn') {
+
+			$popUp.html('<iframe id="video" src="https://www.youtube.com/embed/p1YiDKlSe8k?rel=0&autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><div class="close-btn">&#215;</div>')
+			$popUp.fadeIn(400);
+		}else{
+			$popUp.html('<video id="video" autoplay controls src="img/onplace-china-subtitle.mp4"></video><div class="close-btn">&#215;</div>')
+			$popUp.fadeIn(400);
+		}
+
+	}
+
+	$('.whitepaperbtn').click(function(e) {
+		e.preventDefault();
+		$('.whitepapper').fadeIn(400);
+		$('.whitepapper-overlay').fadeIn(400);
+	});
+	$('.close-button').click(function(e) {
+		e.preventDefault();
+		$('.whitepapper').fadeOut(400);
+		$('.whitepapper-overlay').fadeOut(400);
+	});
+	$('.whitepapper-overlay').click(function() {
+		$('.whitepapper').fadeOut(400);
+		$('.whitepapper-overlay').fadeOut(400);
+	});
+
+	$('.main-video').click(function(e) {
+		console.log('clicked');
+		ShowVideo()
+		$('.close-btn').click(function() {
+			console.log('ok')
+			$('.pop-up').fadeOut(400);
+			setTimeout(function () {
+				$('.pop-up').html('');
+			},400);
+		});
 	});
 
 })

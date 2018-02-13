@@ -12,18 +12,6 @@
 	font-weight: 500;
 	margin-top: 80px;
 }
-	
-@keyframes shadow-ripple {
-	0% {
-		text-shadow: 0px 0px 0px #fff;
-	}
-	50% {
-		text-shadow: 0px 0px 40px #fff;
-	}
-	100%{
-		text-shadow: 0px 0px 0px #fff;
-	}
-}
 .grafic-container{
 	display: flex;
 	flex-wrap: wrap;
@@ -103,6 +91,9 @@
 .grafic-bonuces-picture{
 	width: 800px;
 	max-width: 95%;
+	&.--responsive{
+		display: none;
+	}
 }
 .bonuces-container{
 	padding: 40px 0px;
@@ -112,4 +103,13 @@
     border-radius: 10px;
     padding: 10px 20px;
     background: #fff;
+}
+
+@media screen and (max-width: 540px) {
+	.grafic-bonuces-picture{
+		display: none;
+		&.--responsive{
+			display: block !important;
+		}
+	}
 }
