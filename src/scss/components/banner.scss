@@ -252,3 +252,22 @@
 		width: 100%;
 	}
 }
+
+@media not all and (min-resolution:.001dpcm){ 
+	@supports (-webkit-appearance:none){
+	    .card .back { 
+			display: none;
+	    }
+	}
+}
+// @media screen and (min-color-index:0) and (-webkit-min-device-pixel-ratio:0) 
+// { @media {
+//     .card .back { 
+// 		display: none;
+//     }
+// }}
+@supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) {
+    .card .back { 
+		display: none;
+    }
+}
