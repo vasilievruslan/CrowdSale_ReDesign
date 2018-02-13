@@ -272,6 +272,7 @@ $(function () {
 			$('#currency-form__number').val('').attr('disabled', '');
 			$('#currency-form__date').val('').attr('disabled', '');
 			$('#currency-form__time').val('').attr('disabled', '');
+			alert('Thank you!')
 		});
 	});
 
