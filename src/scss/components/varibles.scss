@@ -6,6 +6,11 @@ $gold: #ffbd4a;
 $main-gradient: linear-gradient(225deg, #3a7bd5 0%, #00d2ff 100%);
 $light-gradient: linear-gradient(180deg, #efefbb 0%, #d4d3dd 100%);
 
+$btn-width: 250px !default;
+$btn-height: 80px !default;
+$btn-full: $btn-height+$btn-width !default;
+$btn-half: $btn-full/2 !default;
+
 .--yellow{
 	color: $yellow;
 }
