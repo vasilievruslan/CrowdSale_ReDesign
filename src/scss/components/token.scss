@@ -40,6 +40,12 @@
 		}
 	}
 }
+#curency{
+	background: #fff;
+	padding: 7px;
+	border: 1px solid #000;
+	color: #666666;
+}
 .active{
 	animation: shadow-ripple 1.5s linear infinite;
 }
@@ -78,13 +84,15 @@
 	max-width: 95vw;
 	padding: 20px;
 	.bonuses-input{
-		width: 100%;
+		font-size: 14px;
+		border: 1px solid #333333;
 		padding: 8px 12px;
-		border: none;
+		width: 100%;
 		box-sizing: border-box;
-		&::placeholder{
-			color: #dddddd;
-			font-weight: 600;
+		display: block;
+		&:placeholder{
+			opacity: 0.8;
+			color: #dedede;
 		}
 	}
 }

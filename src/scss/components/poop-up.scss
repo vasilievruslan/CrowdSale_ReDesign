@@ -1,0 +1,40 @@
+.popup{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.2);
+	top: 0;
+	left: 0;
+	z-index: 3;
+	display: none;
+}
+
+.popup__container{
+	background-image: linear-gradient(135deg, #00d2ff 0%, #16b0ee 39%, #18aded 42%, #3a7bd5 100%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	min-width: 300px;
+	box-shadow: 1px 1px 50px rgba(0,0,0,0.8);
+}
+.pop__content{
+	padding: 20px;
+	border: 1px solid #fff;
+}
+.popup__close{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 20px;
+	cursor: pointer;
+	line-height: 1;
+	color: #fff;
+}
+
+@media screen and (max-width: 425px){
+	.tokenaddrres{
+		font-size: 12px;
+	}
+}

@@ -83,6 +83,9 @@ $(function () {
 	$( "#currency-form__date" ).datepicker({
 	  altFormat: "yy-mm-dd"
 	});
+	$( "#crypto-form__date" ).datepicker({
+	  altFormat: "yy-mm-dd"
+	});
 
 
 	$('#bonuses-submit').attr('disabled', '');
@@ -263,15 +266,27 @@ $(function () {
 		});
 	});
 
-	$('#date-submit').click(function(event) {
+	$('#date-currency-form__name').click(function(event) {
 		event.preventDefault();
-		$.post('https://api.telegram.org/bot542094442:AAFyvENP47ULWOKNCo7DJX2RPmpu-AhsSu8/sendMessage?chat_id=-315434931&text='+ 'Name: ' + $('#currency-form__name').val() + '; E-mail: ' + $('#currency-form__email').val() + '; Phone number: ' + $('#currency-form__number').val() + "; Date:" + $('#currency-form__date') + '; Time:' + $('#currency-form__time') , function(data, textStatus, xhr) {
+		$.post('https://api.telegram.org/bot542094442:AAFyvENP47ULWOKNCo7DJX2RPmpu-AhsSu8/sendMessage?chat_id=-315434931&text='+ 'Name: ' + $('#currency-form__name').val() + '; E-mail: ' + $('#currency-form__email').val() + '; Phone number: ' + $('#currency-form__number').val() + "; Date:" + $('#currency-form__date').val() + '; Time:' + $('#currency-form__time').val() , function(data, textStatus, xhr) {
 		}).done(function () {
 			$('#currency-form__name').val('').attr('disabled', '');
 			$('#currency-form__email').val('').attr('disabled', '');
 			$('#currency-form__number').val('').attr('disabled', '');
 			$('#currency-form__date').val('').attr('disabled', '');
 			$('#currency-form__time').val('').attr('disabled', '');
+			alert('Thank you!')
+		});
+	});
+	$('#date-crypto-form__name').click(function(event) {
+		event.preventDefault();
+		$.post('https://api.telegram.org/bot542094442:AAFyvENP47ULWOKNCo7DJX2RPmpu-AhsSu8/sendMessage?chat_id=-199503202&text='+ 'Name: ' + $('#crypto-form__name').val() + '; E-mail: ' + $('#crypto-form__email').val() + '; Phone number: ' + $('#crypto-form__number').val() + "; Date:" + $('#crypto-form__date').val() + '; Time:' + $('#crypto-form__time').val() , function(data, textStatus, xhr) {
+		}).done(function () {
+			$('#crypto-form__name').val('').attr('disabled', '');
+			$('#crypto-form__email').val('').attr('disabled', '');
+			$('#crypto-form__number').val('').attr('disabled', '');
+			$('#crypto-form__date').val('').attr('disabled', '');
+			$('#crypto-form__time').val('').attr('disabled', '');
 			alert('Thank you!')
 		});
 	});
@@ -333,6 +348,13 @@ $(function () {
 
 	//========================================================================================
 
+	$('#show-popup').click(function(event) {
+		$('.popup').fadeIn(400);
+	});
+	$('.popup__close').click(function(event) {
+		$('.popup').fadeOut(400);
+	});
+
 	$('#showQr').click(function(event) {
 		event.preventDefault();
 		$('.qrpop-up').fadeIn(500);
@@ -383,5 +405,39 @@ $(function () {
 			},400);
 		});
 	});
+
+
+	// calc
+
+	var price = 0.125223
+
+	$('#input').keyup(function(event) {
+		var res = parseFloat($('#input').val()) / price
+		$('#output').val(res.toFixed(4))
+	});
+
+	// langswicther
+
+	 // Language switch
+
+	var $langItem = $('a.lang')
+	var $eng = $('#lang-us');
+	var $cn = $('#lang-cn');
+	var $ind = $('#lang-in');
+
+	var $langBtn = $('.langswitch-wrap');
+	var $langSwitch = $('.langswitch');
+	var $langSwitchCarusel = $('.langswitch-carusel');
+
+	$langBtn.click(function() {
+	$langSwitch.toggle(400);
+	$('.links__item').toggleClass('hided');
+	});
+
+	$langSwitchCarusel.slick({
+		autoplay: true,
+		arrows: false,
+	})
+
 
 })
