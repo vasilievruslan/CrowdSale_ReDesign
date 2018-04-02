@@ -26,8 +26,7 @@
 			<div class="logo__header">
 				<a href="https://onplace.io"><img width="93px" src="img/logo-header.svg" alt="OnPlace"></a>
 			</div>
-			<h1 class="alert__header">ONPLACE INC. PRE-ICO</h1>
-	
+			<h1 class="alert__header">Private placement opportunity</h1>
 			<div class="langswitch-wrap">
 				<div class="langswitch-btn">
 					<ul class="langswitch-carusel">
@@ -181,48 +180,19 @@
 				</ul>
 			</div>
 		</header>
-		<div class="banner__main-content --kor">
-			<div class="btn_container --kor">
-				<div class="banner__calculator">
-					<div class="eth__input">
-						<div class="cur__name">eth</div>
-						<input type="number" id="input" class="calc__input">
+		<div class="banner__main-content">
+			<div class="btn_container">
+				<div class="header__btn">
+					<div class="banner__descr_top">
+						<div class="banner__descr__contenet">You can participate in the private sale and obtain OPL using four different cryptocurrencies: BTC, ETH, LTC, BCH.</div>
 					</div>
-					<i class="calc-ico"></i>
-					<div class="opl__output">
-						<div class="cur__name">opl</div>
-						<input type="number" id="output" disabled class="calc__input">
-					</div>
+					<div id="crypto" class="banner__btn --top btn "><span>BUY TOKENS</span></div>
 				</div>
-				<div class="banner__wallets__list">
-					<a href=""  class="wallets__item">
-						<header class="wallet__logo --mew"></header>
-						<footer class="wallet__name">MyEtherWallet wallet</footer>
-					</a>
-					<a href=""  class="wallets__item">
-						<header class="wallet__logo --metamask"></header>
-						<footer class="wallet__name">MetaMask wallet</footer>
-					</a>
-					<a href=""  class="wallets__item">
-						<header class="wallet__logo --jaxx"></header>
-						<footer class="wallet__name">Jaxx wallet</footer>
-					</a>
-					<a href="" class="wallets__item">
-						<header class="wallet__logo --mist"></header>
-						<footer class="wallet__name">Mist wallet</footer>
-					</a>
-					<a href="" class="wallets__item">
-						<header class="wallet__logo --imToken"></header>
-						<footer class="wallet__name">imToken wallet</footer>
-					</a>
-				</div>
-				<div class="contract__address">
-					<p class="contract__address__title">Contract address: </p>
-					<p class="contract__address__address">0x41021442Eab722C0a52C61738550FaaBFd0fcA4E</p>
-					<p class="contract__address__alert">Minimum investment sum - 1 ETH</p>
-					<div class="custom__token">
-						<button id="show-popup" class="custom__token__btn">token info</button>
+				<div class="footer_btn">
+					<div class="banner__descr">
+						<div class="banner__descr__contenet">You can participate in the OnPlace funding round with Fiat currencies. We offer investors OnPlace Inc. Common Shares.</div>
 					</div>
+					<div id="currency" class="banner__btn --bottom btn "><span>FIAT</span></div>
 				</div>
 			</div>
 			<div class="banner__logo">
@@ -248,12 +218,17 @@
 							<div class="side back"><img src="img/opl-token.png" alt=""></div>
 						</div>
 					</div>
+								
 				</header>
+				<footer class="logo-min">
+					<img width="38px" src="../img/opl-ico.svg" alt="opl-ico">
+				</footer>
 			</div>
 		</div>
 		<a class="to-carousel_btn" href="#carousel">
 			<svg id="tobottom-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 152">
 			    <g class="to-advisors" id="Polygon">
+			        <!-- <polygon stroke="#ffffff" fill="none" points="65 0 130 38 130 114 65 152 0 114 0 38"></polygon> -->
 			        <g id="arrows-tobottom" transform="translate(10, 45)" stroke="#FFFFFF" stroke-width="1" fill="none" fill-rule="evenodd">
 			            <path id="arrow1" d="M17,52.8908772 L17.4542442,52 L56,71.820454 L55.7332114,72.562781 L17,52.8908772 Z M95.0739586,52.8908772 L56.3042087,72.5501012 L56,71.8694488 L94.6197144,52 L95.0739586,52.8908772 Z" id="Combined-Shape"></path>
 			            <path id="arrow2" d="M17,42.8908772 L17.4542442,42 L56,61.820454 L55.7332114,62.562781 L17,42.8908772 Z M95.0739586,42.8908772 L56.3042087,62.5501012 L56,61.8694488 L94.6197144,42 L95.0739586,42.8908772 Z" id="Combined-Shape-Copy"></path>
@@ -262,6 +237,54 @@
 			    </g>
 			</svg>
 		</a>
+		<section id="fiat" class="currency-form">
+			<h3 class="currency-form__title">FIAT</h3>
+			<div class="currency-form__item">
+				<div class="currency-form__text">
+					<p>You MUST be an accredited investor in order to participate in this campaign!</p>
+					<p>We offer all investors a Convertible Note agreement.</p>
+					<p>For more details please visit our <a class="--blue" href="https://www.crowdfunder.com/Onplace">crowdfunding page</a></p>
+					<p>If you are interested, please complete contact information</p>
+				</div>
+			</div>
+	
+			<p class="currency-form__input"><input id="currency-form__name" type="text" placeholder="Name" ></p>
+			<p class="currency-form__input"><input id="currency-form__email" type="email" placeholder="Email" ></p>
+			<p class="currency-form__input"><input id="currency-form__number" type="number" placeholder="Phone number" ></p>
+			<div class="currency-form__item">
+				<div class="currency-form__text">
+					<p>Please select most convenient date and time for our staff to contact you.</p>
+					<p>Please note, we are located in +0 UTC time zone.</p>
+				</div>
+			</div>
+			<p class="currency-form__input"><input id="currency-form__date" type="text" placeholder="Date" ></p>
+			<p class="currency-form__input timepicker"><input name="timepicker" id="currency-form__time" type="text" placeholder="Time (UTC)" ></p>
+			<p class="currency-form__input"><button id="date-currency-form__name" class="currency-form__btn">SUBMIT</button></p>
+		</section>
+		<section id="tokens" class="currency-form">
+			<h3 class="currency-form__title">BUY TOKENS</h3>
+			<div class="currency-form__item">
+				<div class="currency-form__text">
+					<p>You MUST be an accredited investor in order to participate in this campaign!</p>
+					<p>We offer all investors a Convertible Note agreement.</p>
+					<p>For more details please visit our <a class="--blue" href="https://www.crowdfunder.com/Onplace">crowdfunding page</a></p>
+					<p>If you are interested, please complete contact information</p>
+				</div>
+			</div>
+	
+			<p class="currency-form__input"><input id="crypto-form__name" type="text" placeholder="Name" ></p>
+			<p class="currency-form__input"><input id="crypto-form__email" type="email" placeholder="Email" ></p>
+			<p class="currency-form__input"><input id="crypto-form__number" type="number" placeholder="Phone number" ></p>
+			<div class="currency-form__item">
+				<div class="currency-form__text">
+					<p>Please select most convenient date and time for our staff to contact you.</p>
+					<p>Please note, we are located in +0 UTC time zone.</p>
+				</div>
+			</div>
+			<p class="currency-form__input"><input id="crypto-form__date" type="text" placeholder="Date" ></p>
+			<p class="currency-form__input timepicker"><input name="timepicker" id="crypto-form__time" type="text" placeholder="Time (UTC)" ></p>
+			<p class="currency-form__input"><button id="date-crypto-form__name" class="currency-form__btn">SUBMIT</button></p>
+		</section>
 	</section>
 
 	<section id="carousel" class="carouselsect">
@@ -321,8 +344,49 @@
 	        <div class="btn-sect__btn videobtn main-video"><span id="videobtntext">WATCH<br>VIDEO</span><i id="videobtnico"></i></div>
 	        <div class="btn btn-sect__btn default whitepaperbtn">WHITEPAPER</div>
 	        <a target="_blank" href="tokenlist.pdf" class="btn btn-sect__btn default">PRE-SALE INFO</a>
+	        <div class="btn btn-sect__btn default" id="instuctions"><i id="videoinstructions"></i> VIDEO INSTRUCTIONS</div>
+	        <a href="https://faq.onplace.io/" class="btn-sect__btn faq-btn">FAQ</a>
 	    </div>
-	    
+	    <div class="wallets-container">
+	        <ul class="wallets-list">
+	            <li class="wallets-list__item">
+	                <a href="https://www.youtube.com/watch?v=iqj4QL277nU" class="walletitem">
+	                    <img width="80px" src="../img/wallets/civic.svg" alt="">
+	                    <div>civic</div>
+	                </a>
+	            </li>
+	            <li class="wallets-list__item">
+	                <a href="https://www.youtube.com/watch?v=2GaJ5AzUoXg" class="walletitem">
+	                    <img width="80px" src="../img/wallets/ethereum.svg" alt="">
+	                    <div>Mist</div>
+	                </a>
+	            </li>
+	            <li class="wallets-list__item">
+	                <a href="https://www.youtube.com/watch?v=Ev6zP2M4Oio" class="walletitem">
+	                    <img width="80px" src="../img/wallets/imtoken.svg" alt="">
+	                    <div>imToken</div>
+	                </a>
+	            </li>
+	            <li class="wallets-list__item">
+	                <a href="https://www.youtube.com/watch?v=8VobOTWNUxM&t=1s" class="walletitem">
+	                    <img width="80px" src="../img/wallets/jaxx.svg" alt="">
+	                    <div>Jaxx</div>
+	                </a>
+	            </li>
+	            <li class="wallets-list__item">
+	                <a href="https://www.youtube.com/watch?v=xGwjvifiaHw" class="walletitem">
+	                    <img width="80px" src="../img/wallets/metamask.svg" alt="">
+	                    <div>MetaMask</div>
+	                </a>
+	            </li>
+	            <li class="wallets-list__item">
+	                <a href="https://www.youtube.com/watch?v=efYU9NnMWGI" class="walletitem">
+	                    <img width="80px" src="../img/wallets/wallet.svg" alt="">
+	                    <div>MyEtherWallet</div>
+	                </a>
+	            </li>
+	        </ul>
+	    </div>
 	</section>
 
 	<section class="token-warp">
@@ -376,17 +440,6 @@
 		</div>
 
 	</section>
-	
-	<section class="popup">
-		<div class="popup__container">
-			<div class="popup__close">&#10005;</div>
-			<h2>Token info:</h2>
-			<div class="pop__content">
-				<p>Token address: <span class="tokenaddrres">0x12AC8d8F0F48b7954bcdA736AF0576a12Dc8C387</span></p>
-				<p>Symbol: OPL</p>
-				<p>Decimal: 18</p>
-			</div>
-		</div>
-	</section>
+
 </body>
 </html>
