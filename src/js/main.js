@@ -409,7 +409,7 @@ $(function () {
 
 	// calc
 
-	var price = 0.125223
+	var price = 0.000142857
 
 	$('#input').keyup(function(event) {
 		var res = parseFloat($('#input').val()) / price

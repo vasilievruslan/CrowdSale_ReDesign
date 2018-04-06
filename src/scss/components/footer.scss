@@ -5,6 +5,17 @@
 	align-items: flex-start;
 	color: #FFF;
 	padding-top: 100px;
+	&.--kor{
+		padding-top: 0 !important;
+		padding-bottom: 20px;
+	}
+}
+.footer__alert{
+	width: 100%;
+	p{
+		margin: 40px auto;
+		width: 70vw;
+	}
 }
 .footer_logo{
 	font-size: 14px;
